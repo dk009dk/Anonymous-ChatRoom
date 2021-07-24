@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F.R.I.E.N.D.S Reunion</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.7/dist/tailwind.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black">
+  <div class="pages">
+    <div id="chatPage" class="flex-1 p:2 sm:p-6 justify-between flex flex-col h-screen">
+      <div class="flex sm:items-center justify-between py-3 border-b-2 border-gray-200">
+        <div class="flex items-center space-x-4">
+          <div class="flex flex-col leading-tight">
+            <div id="usernameDiv" class="text-xl pl-5 mt-1 flex items-center">
+            
+            </div>
+          </div>
+        </div>
+        <div id="logoDiv" class="flex pr-10 items-center space-x-2">
+          <div class="inline-flex items-center justify-center transition duration-500 ease-in-out text-3xl text-white focus:outline-none" style="font-family: 'Zen Tokyo Zoo', cursive;">F.R.I.E.N.D.S</div>
+        </div>
+        <div id="totalOnlineUsersDiv" class="flex pr-10 items-center space-x-2">
+
+        </div>
+      </div>
+      <div id="messages" class="flex flex-col space-y-4 p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch">
+        
+      </div>
+      <div class="border-t-2 border-gray-200 px-4 pt-4 mb-2 sm:mb-0">
+        <div id="inputMessageDiv" class="relative flex">
+          <input id="inputMessage" type="text" placeholder="Write Something" class="w-full focus:outline-none focus:placeholder-gray-400 text-gray-600 placeholder-gray-600 pl-12 bg-gray-200 rounded-full py-3" />
+        </div>
+      </div>
+    </div>
+
+    <div id="loginPage" class="items-center">
+      <div class="form bg-black font-sans login bg-cover">
+        <h1 class="pt-20 pb-2 text-white text-center text-6xl" style="font-family: 'Zen Tokyo Zoo', cursive;">F.R.I.E.N.D.S</h1>
+        <h1 class="pb-20 text-white text-center text-5xl"><code>The Reunion</code></h1>
+        <div class="container mx-auto h-full flex flex-1 justify-center items-center">
+          <div class="items-center">
+              <div class="leading-loose">
+                <form class="login max-w-sm m-4 p-10 bg-white bg-opacity-25 rounded shadow-xl">
+                    <p class="text-white pb-5 font-base text-center text-xl font-bold">What's your nickname?</p>
+                      <div class="mt-2">
+                         <input maxlength="9" id="usernameInput" class="w-full px-5 py-1 text-bold text-black bg-gray-300 rounded focus:outline-none focus:bg-white"
+                          type="name" id="password" placeholder="Anonymous" arial-label="password" required>
+                      </div>
+                      <div id="error" class="text-center">
+                        <a class="inline-block pt-3 right-0 align-baseline font-light text-lg text-500 text-red-400">
+                            This Username is already taken choose another one.
+                        </a>
+                      </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>

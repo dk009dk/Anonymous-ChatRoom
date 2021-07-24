@@ -1,0 +1,117 @@
+<link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet" />
+<div id="chatPage" class="bg-black flex-1 p:2 sm:p-6 justify-between flex flex-col h-screen">
+  <div class="flex sm:items-center justify-between py-3 border-b-2 border-gray-200">
+    <div class="flex items-center space-x-4">
+      <div class="flex flex-col leading-tight">
+        <div class="text-xl pl-5 mt-1 flex items-center">
+          <span class="text-red-700 px-2 py-2 rounded-lg bg-gray-300 font-extrabold mr-3">Username</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex pr-10 items-center space-x-2">
+      <div class="inline-flex items-center justify-center transition duration-500 ease-in-out text-3xl text-white focus:outline-none" style="font-family: 'Zen Tokyo Zoo', cursive;">F.R.I.E.N.D.S</div>
+    </div>
+    <div class="flex pr-10 items-center space-x-2">
+      <div class="inline-flex font-bold items-center justify-center bg-gray-500 rounded-full h-10 w-10 transition duration-500 ease-in-out text-white focus:outline-none">98</div>
+    </div>
+  </div>
+  <div id="messages" class="flex flex-col space-y-4 p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch">
+    <div class="chat-message">
+      <div class="flex items-end">
+        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
+          <div>
+            <span class="bg-gray-200 text-green-600 font-bold p-1 text-sm rounded-lg inline-block rounded-br-none rounded-bl-none">Username</span>
+            <span class="px-4 py-2 font-semibold text-sm rounded-lg inline-block rounded-tl-none bg-blue-700 text-white"> Can be verified on any platform using docker </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="log-message">
+      <div class="flex items-end justify-center">
+        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-center">
+          <div><span class="px-4 py-2 font-semibold rounded-lg inline-block bg-gray-500 text-white">Log Message DK99 joined the party</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-self-message">
+      <div class="flex items-end justify-end">
+        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">
+          <div><span class="px-4 py-2 font-semibold text-sm rounded-lg inline-block rounded-br-none bg-blue-400 text-white">Your error message says permission denied, npm global installs must be given root privileges.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-self-message">
+      <div class="flex items-end justify-end">
+        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">
+          <div><span class="px-4 py-2 font-semibold text-sm rounded-lg inline-block rounded-tl-none bg-blue-400 text-white">Any updates on this issue? I'm getting the same error when trying to install devtools. Thanks</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-message">
+      <div class="flex items-end">
+        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
+          <div>
+            <span class="bg-gray-200 font-bold text-red-700 p-1 text-sm rounded-lg inline-block rounded-br-none rounded-bl-none">Username</span>
+            <span class="px-4 py-2 font-semibold text-sm rounded-lg inline-block rounded-tl-none bg-blue-600 text-white">Thanks for your message David. I thought I'm alone with this issue. Please, 👍 the issue to support it :)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-message">
+      <div class="flex items-end">
+        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
+          <div>
+            <span class="px-4 py-2 font-semibold text-sm rounded-lg inline-block rounded-tl-none bg-blue-600 text-white">Thanks for your message David. I thought I'm alone with this issue. Please, 👍 the issue to support it :)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-t-2 border-gray-200 px-4 pt-4 mb-2 sm:mb-0">
+    <div class="relative flex">
+      <span class="absolute inset-y-0 flex items-center"> </span>
+      <input id="inputMessage" type="text" placeholder="Write Something" class="w-full focus:outline-none focus:placeholder-gray-400 text-gray-600 placeholder-gray-600 pl-12 bg-gray-200 rounded-full py-3" />
+      <div class="absolute right-0 items-center inset-y-0 sm:flex">
+        <button type="button" class="inline-flex items-center justify-center rounded-full h-12 w-12 transition duration-500 ease-in-out text-white bg-blue-500 hover:bg-blue-400 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6 transform rotate-90">
+            <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .scrollbar-w-2::-webkit-scrollbar {
+    width: 0.25rem;
+    height: 0.25rem;
+  }
+
+  .scrollbar-track-blue-lighter::-webkit-scrollbar-track {
+    --bg-opacity: 1;
+    background-color: #f7fafc;
+    background-color: rgba(247, 250, 252, var(--bg-opacity));
+  }
+
+  .scrollbar-thumb-blue::-webkit-scrollbar-thumb {
+    --bg-opacity: 1;
+    background-color: #edf2f7;
+    background-color: rgba(237, 242, 247, var(--bg-opacity));
+  }
+
+  .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+    border-radius: 0.25rem;
+  }
+</style>
+
+<script>
+  const el = document.getElementById('messages')
+  el.scrollTop = el.scrollHeight
+</script>
+
+
+https://play.tailwindcss.com/ijiEa9vRI3
+https://play.tailwindcss.com/NN9k16cuvY
+https://play.tailwindcss.com/Jd7hNEdRjN
+https://play.tailwindcss.com/sY6JunQIFI
