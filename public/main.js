@@ -133,9 +133,9 @@ $(function () {
         '<span class="px-4 py-2 font-semibold text-sm rounded-lg inline-block rounded-br-none bg-blue-400 text-white">'
       ).text(data.message);
   
-      const $divThree = $('<div id="' + data.uuid + '">').append($messageBodyDiv);
+      const $divThree = $('<div>').append($messageBodyDiv);
       const $divTwo = $(
-        '<div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">'
+        '<div id="' + data.uuid + '" class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">'
       ).append($divThree);
       const $divOne = $('<div class="flex items-end justify-end">').append(
         $divTwo
